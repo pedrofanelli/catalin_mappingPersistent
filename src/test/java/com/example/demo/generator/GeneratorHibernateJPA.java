@@ -13,6 +13,12 @@ import com.example.demo.generator.model.Item;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertAll;
 
+/**
+ * Lo unico que necesite es crear el presistence.xml y ya está!
+ * 
+ * @author peter
+ *
+ */
 public class GeneratorHibernateJPA {
 
 	@Test
