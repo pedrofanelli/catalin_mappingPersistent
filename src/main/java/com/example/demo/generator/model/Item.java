@@ -11,7 +11,7 @@ import jakarta.validation.constraints.Size;
 public class Item {
 
 	@Id
-    @GeneratedValue(generator = "ID_GENERATOR")
+    @GeneratedValue(generator = "ID_GENERATOR") // creado por nosotros ID_GENERATOR en el package-info.java
     private Long id;
 
     @NotNull
