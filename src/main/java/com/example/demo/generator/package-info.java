@@ -10,15 +10,16 @@
  */
 @org.hibernate.annotations.GenericGenerator(
   name = "ID_GENERATOR",
-  strategy = "enhanced-sequence",
+  //strategy = "enhanced-sequence",
+  type = org.hibernate.id.enhanced.SequenceStyleGenerator.class, // cambió, ahora debemos setearlo de esta manera
   parameters = {
      @org.hibernate.annotations.Parameter(
         name = "sequence_name",
-        value = "JPWHSD_SEQUENCE"
+        value = "SETTED_BY_ME_SEQUENCE"
      ),
      @org.hibernate.annotations.Parameter(
         name = "initial_value",
-        value = "1000"
+        value = "1616"
      )
 })
 package com.example.demo.generator;
