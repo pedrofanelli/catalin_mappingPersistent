@@ -20,8 +20,8 @@ public class Bid {
     @NotNull
     private BigDecimal amount;
 
-    @ManyToOne(optional = false, fetch = FetchType.LAZY) // NOT NULL
-    @JoinColumn(name = "ITEM_ID")
+    @ManyToOne(optional = false, fetch = FetchType.LAZY) // optional:false means NOT NULL
+    @JoinColumn(name = "ITEM_ID") // se crea la columna con la FK apuntando al item
     private Item item;
 
     public Bid() {
@@ -30,6 +30,7 @@ public class Bid {
     public Bid(BigDecimal amount, Item item) {
         this.amount = amount;
         this.item = item;
+        item.getBids().add(this); // agregado por nosotros
     }
 
     public Bid(Item item) {

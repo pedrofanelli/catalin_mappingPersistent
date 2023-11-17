@@ -44,7 +44,7 @@ public class GeneratorSpringDataJPATest {
     void storeLoadItem() {
 
         Item item = new Item();
-        item.setName("Some Item");
+        item.setName("COCAINA #1");
         item.setAuctionEnd(Helper.tomorrow());
 
         itemRepository.save(item);
@@ -53,14 +53,16 @@ public class GeneratorSpringDataJPATest {
 
         assertAll(
                 () -> assertEquals(1, items.size()),
-                () -> assertEquals("Some Item", items.get(0).getName())
+                () -> assertEquals("COCAINA #1", items.get(0).getName())
         );
         
         Item item2 = new Item();
-        item2.setName("Some Item 2");
+        item2.setName("Some Item #2");
         item2.setAuctionEnd(Helper.tomorrow());
         
         itemRepository.save(item2);
+        
+        
 
     }
 }
