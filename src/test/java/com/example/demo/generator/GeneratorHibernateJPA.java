@@ -14,7 +14,12 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertAll;
 
 /**
- * Lo unico que necesite es crear el presistence.xml y ya está!
+ * Lo unico que necesite es crear el persistence.xml y ya está!
+ * 
+ * Hay otra forma programatica que podemos verla en spilca, generando una clase CustomPersistenceUnitInfo.java
+ * Eso reemplazaria el XML
+ * 
+ * Acá NO estamos usando Spring Data, es Hibernate con JPA puro
  * 
  * @author peter
  *

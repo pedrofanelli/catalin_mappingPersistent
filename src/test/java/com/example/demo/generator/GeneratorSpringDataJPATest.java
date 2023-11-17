@@ -17,7 +17,9 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 import com.example.demo.generator.configuration.SpringDataConfiguration;
 
 /**
- * Podemos usar CofingForJPA que usará springboot
+ * Implementamos Spring Data!
+ * 
+ * Podemos usar ConfingForJPA que usará Springboot
  * 
  * O podemos hacerlo con SpringDataConfiguration que setea con beans la base
  * 
