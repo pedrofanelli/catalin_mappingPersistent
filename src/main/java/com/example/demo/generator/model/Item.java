@@ -32,7 +32,7 @@ public class Item {
     private Date auctionEnd;
 
     @Transient
-    private Set<Bid> bids = new HashSet<>();
+    private Set<Bid> bids = new HashSet<>(); // transient significa que NO se persiste en la BD
 
     public Long getId() { // Optional but useful
         return id;
