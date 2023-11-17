@@ -16,7 +16,7 @@
  * @author peter
  *
  */
-@org.hibernate.annotations.GenericGenerator(
+@org.hibernate.annotations.GenericGenerator( // un generador CUSTOM de valor automático, donde la estrategia ahora se llama "type"
   name = "ID_GENERATOR",
   //strategy = "enhanced-sequence",
   type = org.hibernate.id.enhanced.SequenceStyleGenerator.class, // cambió, ahora debemos setearlo de esta manera
