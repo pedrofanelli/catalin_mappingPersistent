@@ -25,6 +25,10 @@ import static org.junit.jupiter.api.Assertions.assertAll;
  * 
  * NO usamos el repository que nos provee de métodos, eso se usa en Spring Data
  * 
+ * Por eso tenemos mucho más boiler plate code, tendremos quizás más funcionalidades, pero más código
+ * 
+ * No usamos los métodos, tenemos que iniciar transacciones, escribir queries, todo
+ * 
  * @author peter
  *
  */

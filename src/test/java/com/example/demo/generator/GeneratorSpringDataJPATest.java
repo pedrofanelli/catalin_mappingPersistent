@@ -27,6 +27,8 @@ import com.example.demo.generator.configuration.SpringDataConfiguration;
  * 
  * Acá usamos el repository que nos provee de métodos!
  * 
+ * Mucho menos código que usando Hibernate/JPA puro, pero menos rendimiento
+ * 
  * @author peter
  *
  */
