@@ -20,8 +20,10 @@ import com.example.demo.generator.configuration.SpringDataConfiguration;
  * Implementamos Spring Data!
  * 
  * Podemos usar ConfingForJPA que usará Springboot, y levantará la data de la base del archivo application.properties
+ * Esa fue la metodología para el proyecto anterior catalin_SpringDataJPA1
  * 
- * O podemos hacerlo con SpringDataConfiguration que setea con beans la base desde la tipica configuracion de Spring
+ * O podemos hacerlo con SpringDataConfiguration que setea con beans la base desde la tipica configuracion de Spring,
+ * evitando usar el archivo application.properties
  * 
  * @author peter
  *
