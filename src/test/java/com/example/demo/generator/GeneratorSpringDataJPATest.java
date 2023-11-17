@@ -5,9 +5,12 @@ import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 
+import java.math.BigDecimal;
 import java.util.List;
 import com.example.demo.generator.model.Item;
+import com.example.demo.generator.model.Bid;
 import com.example.demo.generator.configuration.ConfigForJPA;
+import com.example.demo.generator.repositories.BidRepository;
 import com.example.demo.generator.repositories.ItemRepository;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -39,6 +42,9 @@ public class GeneratorSpringDataJPATest {
 	
 	@Autowired
     private ItemRepository itemRepository;
+	
+	@Autowired
+	private BidRepository bidRepository;
 
     @Test
     void storeLoadItem() {
@@ -62,7 +68,12 @@ public class GeneratorSpringDataJPATest {
         
         itemRepository.save(item2);
         
+        BigDecimal amount = BigDecimal.valueOf(88.16);
         
-
+        // armamos el bid y se asocia al item
+        Bid bid = new Bid(amount,item);
+        
+        bidRepository.save(bid);
+        
     }
 }
