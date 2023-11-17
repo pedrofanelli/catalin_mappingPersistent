@@ -1,6 +1,9 @@
 package com.example.demo.generator.model;
 
+import java.util.Collections;
 import java.util.Date;
+import java.util.Set;
+import java.util.HashSet;
 
 import jakarta.persistence.*;
 import jakarta.validation.constraints.Future;
@@ -11,19 +14,25 @@ import jakarta.validation.constraints.Size;
 public class Item {
 
 	@Id
-    @GeneratedValue(generator = "ID_GENERATOR") // creado por nosotros ID_GENERATOR en el package-info.java
+    @GeneratedValue(generator = "ID_GENERATOR")
     private Long id;
+
+    @Version
+    private long version;
 
     @NotNull
     @Size(
-            min = 2,
-            max = 255,
-            message = "Name is required, maximum 255 characters."
+        min = 2,
+        max = 255,
+        message = "Name is required, maximum 255 characters."
     )
     private String name;
 
     @Future
-    protected Date auctionEnd;
+    private Date auctionEnd;
+
+    @Transient
+    private Set<Bid> bids = new HashSet<>();
 
     public Long getId() { // Optional but useful
         return id;
@@ -43,5 +52,13 @@ public class Item {
 
     public void setAuctionEnd(Date auctionEnd) {
         this.auctionEnd = auctionEnd;
+    }
+
+    public Set<Bid> getBids() {
+        return Collections.unmodifiableSet(bids);
+    }
+
+    public void addBid(Bid bid) {
+        bids.add(bid);
     }
 }
