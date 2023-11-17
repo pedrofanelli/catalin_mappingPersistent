@@ -14,7 +14,7 @@ import jakarta.validation.constraints.NotNull;
 public class Bid {
 
 	@Id
-    @GeneratedValue(generator = "ID_GENERATOR")
+    @GeneratedValue
     private Long id;
 
     @NotNull

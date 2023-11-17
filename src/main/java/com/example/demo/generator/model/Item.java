@@ -55,7 +55,7 @@ public class Item {
     }
 
     public Set<Bid> getBids() {
-        return Collections.unmodifiableSet(bids);
+        return this.bids;
     }
 
     public void addBid(Bid bid) {

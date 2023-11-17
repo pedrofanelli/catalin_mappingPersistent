@@ -1,5 +1,6 @@
 package com.example.demo.generator;
 
+import java.math.BigDecimal;
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
@@ -8,6 +9,7 @@ import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
 import jakarta.persistence.Persistence;
 
+import com.example.demo.generator.model.Bid;
 import com.example.demo.generator.model.Item;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
@@ -63,6 +65,15 @@ public class GeneratorHibernateJPA {
                     () -> assertEquals(1, items.size()),
                     () -> assertEquals("Some Item", items.get(0).getName())
             );
+            
+            BigDecimal amount = BigDecimal.valueOf(88.16);
+            
+            // armamos el bid y se asocia al item
+            Bid bid = new Bid(amount,item);
+            
+            em.getTransaction().begin();
+            em.persist(bid);
+            em.getTransaction().commit();
 
         } finally {
             em.close();
