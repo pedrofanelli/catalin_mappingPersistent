@@ -1,7 +1,10 @@
 package com.example.demo.generator;
 
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.test.context.ContextConfiguration;
+
 import java.util.List;
 import com.example.demo.generator.model.Item;
 import com.example.demo.generator.configuration.ConfigForJPA;
@@ -10,9 +13,22 @@ import com.example.demo.generator.repositories.ItemRepository;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertAll;
 
+import org.springframework.test.context.junit.jupiter.SpringExtension;
+import com.example.demo.generator.configuration.SpringDataConfiguration;
 
-public class GeneratorSpringDataJPATest extends ConfigForJPA {
-
+/**
+ * Podemos usar CofingForJPA que usará springboot
+ * 
+ * O podemos hacerlo con SpringDataConfiguration que setea con beans la base
+ * 
+ * @author peter
+ *
+ */
+@ExtendWith(SpringExtension.class)
+@ContextConfiguration(classes = {SpringDataConfiguration.class})
+//public class GeneratorSpringDataJPATest extends ConfigForJPA {
+public class GeneratorSpringDataJPATest {
+	
 	@Autowired
     private ItemRepository itemRepository;
 
