@@ -25,6 +25,8 @@ import com.example.demo.generator.configuration.SpringDataConfiguration;
  * O podemos hacerlo con SpringDataConfiguration que setea con beans la base desde la tipica configuracion de Spring,
  * evitando usar el archivo application.properties
  * 
+ * Acá usamos el repository que nos provee de métodos!
+ * 
  * @author peter
  *
  */

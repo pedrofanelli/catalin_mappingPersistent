@@ -19,7 +19,11 @@ import static org.junit.jupiter.api.Assertions.assertAll;
  * Hay otra forma programatica que podemos verla en spilca, generando una clase CustomPersistenceUnitInfo.java
  * Eso reemplazaria el XML
  * 
+ * En una aplicación podremos formar el factory en un @Bean y luego usar el entityManager en cada clase específica 
+ * 
  * Acá NO estamos usando Spring Data, es Hibernate con JPA puro
+ * 
+ * NO usamos el repository que nos provee de métodos, eso se usa en Spring Data
  * 
  * @author peter
  *
