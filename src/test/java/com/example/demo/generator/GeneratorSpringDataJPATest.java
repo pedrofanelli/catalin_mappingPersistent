@@ -30,10 +30,10 @@ import com.example.demo.generator.configuration.SpringDataConfiguration;
  * @author peter
  *
  */
-//@ExtendWith(SpringExtension.class)
-//@ContextConfiguration(classes = {SpringDataConfiguration.class})
-public class GeneratorSpringDataJPATest extends ConfigForJPA {
-//public class GeneratorSpringDataJPATest {
+@ExtendWith(SpringExtension.class)
+@ContextConfiguration(classes = {SpringDataConfiguration.class})
+//public class GeneratorSpringDataJPATest extends ConfigForJPA {
+public class GeneratorSpringDataJPATest {
 	
 	@Autowired
     private ItemRepository itemRepository;
