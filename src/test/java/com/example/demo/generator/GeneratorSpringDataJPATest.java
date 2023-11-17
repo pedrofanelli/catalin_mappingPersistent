@@ -19,17 +19,17 @@ import com.example.demo.generator.configuration.SpringDataConfiguration;
 /**
  * Implementamos Spring Data!
  * 
- * Podemos usar ConfingForJPA que usará Springboot
+ * Podemos usar ConfingForJPA que usará Springboot, y levantará la data de la base del archivo application.properties
  * 
- * O podemos hacerlo con SpringDataConfiguration que setea con beans la base
+ * O podemos hacerlo con SpringDataConfiguration que setea con beans la base desde la tipica configuracion de Spring
  * 
  * @author peter
  *
  */
-@ExtendWith(SpringExtension.class)
-@ContextConfiguration(classes = {SpringDataConfiguration.class})
-//public class GeneratorSpringDataJPATest extends ConfigForJPA {
-public class GeneratorSpringDataJPATest {
+//@ExtendWith(SpringExtension.class)
+//@ContextConfiguration(classes = {SpringDataConfiguration.class})
+public class GeneratorSpringDataJPATest extends ConfigForJPA {
+//public class GeneratorSpringDataJPATest {
 	
 	@Autowired
     private ItemRepository itemRepository;
