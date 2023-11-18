@@ -7,6 +7,8 @@ import org.springframework.test.context.ContextConfiguration;
 
 import java.math.BigDecimal;
 import java.util.List;
+import java.util.Set;
+
 import com.example.demo.generator.model.Item;
 import com.example.demo.generator.model.Bid;
 import com.example.demo.generator.configuration.ConfigForJPA;
@@ -74,6 +76,10 @@ public class GeneratorSpringDataJPATest {
         Bid bid = new Bid(amount,item);
         
         bidRepository.save(bid);
+        
+        Set<Bid> listaDeBids = item.getBids();
+        System.out.println(listaDeBids.size());
+        listaDeBids.forEach(bi->System.out.println(bi.getAmount()));
         
     }
 }
